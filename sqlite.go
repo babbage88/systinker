@@ -25,7 +25,7 @@ func (d *SqliteDb) initDb() error {
 		slog.Error("Error opening sqlite db", slog.String("filename", d.Filename), "error", err.Error())
 		return err
 	}
-	err = d.Db.QueryRow(`SELECT sqlite_version()`).Scan(d.Version)
+	err = d.Db.QueryRow(`SELECT sqlite_version()`).Scan(&d.Version)
 	return err
 }
 
