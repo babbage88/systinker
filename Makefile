@@ -16,7 +16,7 @@ build:
 install: build
 	@echo "Installing $(BINARY_NAME) to $(INSTALL_DIR)..."
 	mkdir -p $(INSTALL_DIR)
-	cp $(BINARY_NAME) $(INSTALL_DIR)/$(BINARY_NAME)
+	cp $(ARTIFACT_DIR)/$(BINARY_NAME) $(INSTALL_DIR)/$(BINARY_NAME)
 	@echo "Installed $(BINARY_NAME) to $(INSTALL_DIR)/$(BINARY_NAME)"
 
 clean:
